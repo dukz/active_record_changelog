@@ -50,7 +50,7 @@ module ActiveRecordChangelog
         self.changelogs.create!(
           :fields_changed => fields_changed.join(','),
           :summary => summary,
-          :changer => ''
+          :changer => ActiveRecordChangelog.changer
         )
       end
     end
