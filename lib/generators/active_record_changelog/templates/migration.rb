@@ -9,6 +9,8 @@ class CreateChangelogs < ActiveRecord::Migration
 
       t.timestamps
     end 
+
+    add_index :changelogs, [:item_type, :item_id]
   end 
 
   def self.down
