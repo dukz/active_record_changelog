@@ -1,0 +1,8 @@
+Description:
+    Generates the changelog model
+
+Example:
+    rails generate active_record_changelog
+
+    This will create:
+        db/migrate/create_changelog

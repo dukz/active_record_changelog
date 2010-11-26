@@ -1,0 +1,22 @@
+sqlite:
+  adapter: sqlite
+  database: vendor/plugins/active_record_changelog/test/db/active_record_changelog.sqlite.db
+ 
+sqlite3:
+  adapter: sqlite3
+  database: vendor/plugins/active_record_changelog/test/db/active_record_changelog.sqlite3.db
+ 
+postgresql:
+  adapter: postgresql
+  username: 
+  password: 
+  database: active_record_changelog
+  min_messages: ERROR
+ 
+mysql:
+  adapter: mysql
+  host: localhost
+  username: root
+  password: 
+  database: active_record_changelog
+

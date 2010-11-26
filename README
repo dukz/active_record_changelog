@@ -1,0 +1,25 @@
+ActiveRecordChangelog
+=====================
+
+Logs changes of models whenever they are updated. 
+
+This does not keep versions of records, but just log them out. If you want that feature, check out Paper Trail instead.
+
+
+Example
+=======
+
+  class Movie < ActiveRecord::Base
+    log_changes :ignore => [:hits, :updated_at]
+  end
+
+  @movie = Movie.find(1)
+  @changelogs = @movie.changelogs
+  @changelogs.each do |changelog|
+    puts changelog.field_changed
+    puts changelog.summary
+    puts changelog.changer
+    puts changelog.updated_at
+  end
+
+Copyright (c) 2010 [Andrew Angelo Ang], released under the MIT license
